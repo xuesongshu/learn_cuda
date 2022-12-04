@@ -1,9 +1,9 @@
 ﻿#include "b.hpp"
-#include "common.cuh"
+#include "common.cu"
 
-__global__ void hello()
+extern "C" static __global__ void hello()
 {
-    common_hello(2);
+    common_hello(2, threadIdx.x * threadIdx.y + threadIdx.x);
 }
 
 void b_hello()
