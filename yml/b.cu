@@ -1,5 +1,5 @@
 ﻿#include "b.hpp"
-#include "common.cuh"
+#include "common.cu"
 
 extern "C" static __global__ void hello()
 {
@@ -8,6 +8,6 @@ extern "C" static __global__ void hello()
 
 void b_hello()
 {
-    hello<<<1, 2>>>();
+    hello<<<4, 4>>>();
     cudaDeviceSynchronize();
 }

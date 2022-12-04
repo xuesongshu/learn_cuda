@@ -1,7 +1,7 @@
 ﻿#include "common.cuh"
 #include <stdio.h>
 
-__host__ __device__ void common_hello(int ichoice, int ithread_id)
+extern "C" static __host__ __device__ void common_hello(int ichoice, int ithread_id)
 {
     switch (ichoice)
     {
