@@ -7,10 +7,10 @@ using namespace std;
 int main(int argc, char **argv)
 {
     int ichoice;
-    cout << "input choice" << endl;
-    cin >> ichoice;
     while (true)
     {
+        cout << "input choice" << endl;
+        cin >> ichoice;
         switch (ichoice)
         {
         case 0:
