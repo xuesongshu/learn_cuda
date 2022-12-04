@@ -1,5 +1,5 @@
 ﻿#include "a.hpp"
-#include "common.cu"
+#include "common.cuh"
 
 extern "C" static __global__ void hello()
 {
