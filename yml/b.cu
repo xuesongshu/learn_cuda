@@ -1,7 +1,7 @@
 ﻿#include "b.hpp"
-#include "common.cu"
+#include "common.cuh"
 
-extern "C" static __global__ void hello()
+static __global__ void hello()
 {
     common_hello(2, threadIdx.x * threadIdx.y + threadIdx.x);
 }
