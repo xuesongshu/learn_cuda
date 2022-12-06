@@ -3,7 +3,7 @@
 
 static __global__ void hello()
 {
-    common_hello(2, threadIdx.x * threadIdx.y + threadIdx.x);
+    common_hello(2, blockIdx.x * blockDim.x + threadIdx.x);
 }
 
 void b_hello()
